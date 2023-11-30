@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  left: 0;
+}
+
+.button {
+  border: 1px solid;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  display: flex;
+}
+
+.button:hover {
+  cursor: pointer;
+  border-color: #0e82ad;
+}
+
+#navbar {
+  box-shadow: 2px gray;
+  border-bottom: 1px solid #a4a0a0;
+  height: 90px;
+}
+
+#center {
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  display: flex;
+}
+
+#menu {
+  border: 1px solid gray;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  padding: 0;
+  display: grid;
+}
+
+/*# sourceMappingURL=style.3a01df49.css.map */
