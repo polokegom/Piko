@@ -4,7 +4,7 @@ import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 
 //const dinoModel = new URL("../Piko/Assets/T_Rex/source/dinosaur.glb", import.meta.url);
 const modelLoader = new GLTFLoader();
-let mixer;
+let mixer, bracioMixer;
 const scene = new Three.Scene();
 
 modelLoader.load("/Assets/T_Rex/source/dinosaur.glb", (gltf) => {
@@ -18,6 +18,19 @@ modelLoader.load("/Assets/T_Rex/source/dinosaur.glb", (gltf) => {
         var action = mixer.clipAction(animation);
         action.play();
   
+})
+
+modelLoader.load("/Assets/braciosaurus.glb", (gltf) => {
+
+      
+  gltf.scene.scale.set(10,10,10);
+  gltf.scene.position.add(new Three.Vector3(20,0,-20));
+    scene.add(gltf.scene);
+    bracioMixer = new Three.AnimationMixer(gltf.scene);
+    var animation = gltf.animations[0];
+    var action = bracioMixer.clipAction(animation);
+    action.play();
+
 })
 /**/
 const renderer = new Three.WebGLRenderer();
@@ -50,6 +63,9 @@ const controls = new OrbitControls(camera,renderer.domElement);
   if (mixer) {
     mixer.update(0.024); // Assuming 60 FPS
   }  
+  if (bracioMixer){
+    bracioMixer.update(0.03);
+  }
   renderer.render(scene, camera);
 
   //  renderer.
