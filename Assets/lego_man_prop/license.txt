@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lego Man Prop
+* source:	https://sketchfab.com/3d-models/lego-man-prop-9d5df16b87514d06bf9fb5e147509415
+* author:	KageG (https://sketchfab.com/KageG)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lego Man Prop" (https://sketchfab.com/3d-models/lego-man-prop-9d5df16b87514d06bf9fb5e147509415) by KageG (https://sketchfab.com/KageG) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
