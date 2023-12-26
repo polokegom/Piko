@@ -108,19 +108,19 @@ modelLoader.load("/Assets/lego_man_prop/scene.gltf  ", (gltf) => {
 })
 const geoCloud = new Three.BoxGeometry(20,5,40);
 const matCloud = new Three.MeshStandardMaterial({color: 0xFFFFFF});
-const cloud = new Three.InstancedMesh(geoCloud, matCloud, 100);
+const cloud = new Three.InstancedMesh(geoCloud, matCloud, 20);
 
 scene.background = new Three.Color(0x87CEEB);
 const instanceObj = new Three.Object3D;
 const geoPlane = new Three.PlaneGeometry(400,400);
-const matPlane = new Three.MeshStandardMaterial({color: 0x76552b});
+const matPlane = new Three.MeshStandardMaterial({color: 0x696969});
 const meshPlane  = new Three.Mesh(geoPlane, matPlane);
 meshPlane.rotation.x = -0.5*Math.PI;
 for (let k= 0; k< 20; k++) {
 
-  instanceObj.position.x = 150 - Math.round(300*Math.random());
+  instanceObj.position.x = 200 - Math.round(400*Math.random());
   instanceObj.position.y = 100 + Math.round(20*Math.random());
-  instanceObj.position.z = 100 - Math.round(200*Math.random());
+  instanceObj.position.z = 200 - Math.round(400*Math.random());
   instanceObj.updateMatrix();
   cloud.setMatrixAt(k, instanceObj.matrix);
 
@@ -197,7 +197,7 @@ const gridHelper = new Three.GridHelper(400,100);
 //scene.add(meshBall);
 scene.add(ambientLight);
 
-scene.add(gridHelper);
+//scene.add(gridHelper);
 
 const controls = new OrbitControls(camera,renderer.domElement);
   var birdTime = 0;
