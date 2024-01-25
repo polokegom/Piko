@@ -65,6 +65,8 @@ modelLoader.load("/Assets/pine_tree.glb", (gltf) => {
 
       
   gltf.scene.scale.set(0.3,0.3,0.3);
+ // const geoTree = gltf.scene.children[0].geometry
+ // const instancedMesh = new Three.InstancedMesh(geoTree.geometry.clone);
   gltf.scene.position.add(new Three.Vector3(60,0,-20));
   scene.add(gltf.scene);
 
